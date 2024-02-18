@@ -107,14 +107,13 @@ curl http://localhost:8080/api/recipes?id=42
 ```
 
 
-`Here id = 42`
 ### Add a New Recipe
 
 ```bash
 curl  http://localhost:8080/api/recipes/${key}
 ```
 
-
+`Here id = 42`
 ### Replace a Recipe
 
 ```bash
