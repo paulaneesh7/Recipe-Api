@@ -9,13 +9,14 @@ import {
 } from "../controller/recipe_controller.js";
 
 const router = express.Router();
+const key = process.env.KEY;
 
 router
-  .post("/", createRecipe)
+  .post(`/${key}`, createRecipe)
   .get("/", getAllRecipes)
   .get("/:id", getRecipe)
-  .put("/:id", replaceRecipe)
-  .patch("/:id", updateRecipe)
-  .delete("/:id", deleteRecipe);
+  .put(`/${key}/:id`, replaceRecipe)
+  .patch(`/${key}/:id`, updateRecipe)
+  .delete(`/${key}/:id`, deleteRecipe);
 
 export { router };

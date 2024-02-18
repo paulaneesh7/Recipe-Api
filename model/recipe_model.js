@@ -11,7 +11,7 @@ const recipeSchema = new Schema({
   cuisine: { type: String, required: true },
   calories: { type: Number },
   tags: { type: [String], required: true },
-  image: { type: String, required: true },
+  image: { type: String },
   rating: { type: Number, required: true },
   reviewCount: { type: Number, required: true },
   mealType: { type: [String], required: true },
