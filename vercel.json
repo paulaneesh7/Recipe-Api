@@ -12,6 +12,10 @@
       "dest": "/index.js"
     },
     {
+      "src": "/api/recipes/limited",
+      "dest": "/index.js"
+    },
+    {
       "src": "/api/recipes/:id",
       "dest": "/index.js"
     },
