@@ -9,11 +9,15 @@
   "routes": [
     {
       "src": "/api/recipes",
-      "dest": "index.js"
+      "dest": "/index.js"
     },
     {
-      "src": "/api/recipes/(.*)",
-      "dest": "index.js"
+      "src": "/api/recipes/:id",
+      "dest": "/index.js"
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "/index.js"
     }
   ]
 }
