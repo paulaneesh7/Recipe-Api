@@ -50,7 +50,7 @@ The base URL for the API is `http://localhost:8080`. Make sure to prefix all end
   - `mealType` (required): Type of meal (e.g., "breakfast", "lunch", "dinner", "snack").
   
 - **Response:**
-  - Success: Returns the ID of the newly added recipe.
+  - Success: Returns the newly added recipe.
   - Failure: Returns an error message.
 
 
