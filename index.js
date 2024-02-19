@@ -1,6 +1,7 @@
 import express from "express";
 import "dotenv/config";
 import mongoose from "mongoose";
+import cors from "cors";
 import { router as recipeRouter } from "./router/recipe_routes.js";
 
 const server = express();
@@ -16,6 +17,7 @@ async function main() {
 // body-parser middleware
 server.use(express.json());
 server.use("/api/recipes", recipeRouter);
+server.use(cors());
 
 server.listen(process.env.PORT, () => {
   console.log(`Server running on ${process.env.PORT}`);
