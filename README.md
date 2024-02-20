@@ -6,7 +6,6 @@ Welcome to the Recipe API! This API allows you to retrieve recipes from a databa
 
 The base URL for the API is `http://localhost:8080`. Make sure to prefix all endpoint paths with this base URL.
 
-
 ## Endpoints
 
 ### 1. Get All Recipes
@@ -27,11 +26,21 @@ The base URL for the API is `http://localhost:8080`. Make sure to prefix all end
   - Success: Returns a single recipe object.
   - Failure: Returns an error message.
 
-### 3. Add New Recipe
+### 3. Get Limited Recipes
+
+- **Endpoint:** `/api/recipes/limited?result=${number}`
+- **Method:** `GET`
+- **Parameters:**
+  - `number` (required): Number of recipes to retrieve.
+- **Response:**
+  - Success: Returns an array of recipe objects.
+  - Failure: Returns an error message.
+
+### 4. Add New Recipe
 
 - **Endpoint:** `/api/recipes/${key}`
 - **Method:** `POST`
-- **Parameter**: 
+- **Parameter**:
   - `key` (required): Key for secure access.
 - **Data requirement:**
   - `name` (required): Name of the recipe.
@@ -48,13 +57,11 @@ The base URL for the API is `http://localhost:8080`. Make sure to prefix all end
   - `rating` (required): Rating of the recipe (from 1 to 5).
   - `reviewCount` (required): Number of reviews for the recipe.
   - `mealType` (required): Type of meal (e.g., "breakfast", "lunch", "dinner", "snack").
-  
 - **Response:**
   - Success: Returns the newly added recipe.
   - Failure: Returns an error message.
 
-
-### 4. Replace Recipe
+### 5. Replace Recipe
 
 - **Endpoint:** `/api/recipes/${key}/:id`
 - **Method:** `PUT`
@@ -65,8 +72,7 @@ The base URL for the API is `http://localhost:8080`. Make sure to prefix all end
   - Success: Returns the replaced recipe.
   - Failure: Returns an error message.
 
-
-### 5. Update Recipe
+### 6. Update Recipe
 
 - **Endpoint:** `/api/recipes/${key}/:id`
 - **Method:** `PATCH`
@@ -77,8 +83,7 @@ The base URL for the API is `http://localhost:8080`. Make sure to prefix all end
   - Success: Returns the updated recipe.
   - Failure: Returns an error message.
 
-
-### 6. Delete Recipe
+### 7. Delete Recipe
 
 - **Endpoint:** `/api/recipes/${key}/:id`
 - **Method:** `DELETE`
@@ -89,62 +94,63 @@ The base URL for the API is `http://localhost:8080`. Make sure to prefix all end
   - Success: Returns the deleted recipe.
   - Failure: Returns an error message.
 
-
 ## Example Usage
 
 ### Fetch All Recipes
 
 ```bash
-curl http://localhost:8080/api/recipes
+curl https://recipe-api-paulaneesh7.vercel.app/api/recipes
 ```
 
 ### Fetch a Recipe by ID
 
 ```bash
-curl http://localhost:8080/api/recipes/42
+curl https://recipe-api-paulaneesh7.vercel.app/api/recipes/42
 
-curl http://localhost:8080/api/recipes?id=42
+curl https://recipe-api-paulaneesh7.vercel.app/api/recipes?id=42
 ```
 
+### Fetch few Recipes
+
+```bash
+curl https://recipe-api-paulaneesh7.vercel.app/api/recipes/limited?result=6
+```
 
 ### Add a New Recipe
 
 ```bash
-curl  http://localhost:8080/api/recipes/${key}
+curl  https://recipe-api-paulaneesh7.vercel.app/api/recipes/${key}
 ```
 
 `Here id = 42`
+
 ### Replace a Recipe
 
 ```bash
-curl http://localhost:8080/api/recipes/${key}/42
+curl https://recipe-api-paulaneesh7.vercel.app/api/recipes/${key}/42
 ```
-
 
 ### Update a Recipe
 
 ```bash
-curl http://localhost:8080/api/recipes/${key}/42
+curl https://recipe-api-paulaneesh7.vercel.app/api/recipes/${key}/42
 ```
-
 
 ### Delete a Recipe
 
 ```bash
-curl http://localhost:8080/api/recipes/${key}/42
+curl https://recipe-api-paulaneesh7.vercel.app/api/recipes/${key}/42
 ```
 
-
 ## Notes
+
 Feel free to experiment with the API and integrate it into your projects. If you encounter any issues or have questions, please refer to the [GitHub repository](https://github.com/paulaneesh7/Recipe-Api) or open an [issue](https://github.com/paulaneesh7/Recipe-Api/issues). 😀
 
-
-
 ### Security Note
-  
+
 For the **key** parameter, you can contact me to get the key for `adding` , `replacing` , `updating` and `deleting` recipes.
 
-
 ## Contact with me
+
 - 💬 Feel free to ask for any help in any of the above things, I will definitely try to help.
 - 📫 How to reach me: Connect with me on [mail](mailto:aneesh16117@gmail.com) or on [github](https://github.com/paulaneesh7).

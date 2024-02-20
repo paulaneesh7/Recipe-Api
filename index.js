@@ -19,6 +19,14 @@ server.use(express.json());
 server.use("/api/recipes", recipeRouter);
 server.use(cors());
 
+server.get("/", (req, res, next) => {
+  res.send(
+    `Please change the endpoint to ${`/api/recipes`} to retrieve all the recipes or visit the docs for more information 👉 ${
+      process.env.SITE
+    }`
+  );
+});
+
 server.listen(process.env.PORT, () => {
   console.log(`Server running on ${process.env.PORT}`);
 });
